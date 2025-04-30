@@ -55,7 +55,7 @@ const CartItem = props => (
                   <span>
                     <FaRupeeSign color="#616E7C" size={12} />
                   </span>{' '}
-                  {cost}
+                  {cost * quantity}
                   /-
                 </p>
               </div>
