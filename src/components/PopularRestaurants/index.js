@@ -10,10 +10,7 @@ import RestaurantCard from '../RestaurantCard'
 import './index.css'
 
 const LoaderContainer = styled.div`
-  min-height: ${props => {
-    console.log(props)
-    return props.minHeight
-  }}px;
+  min-height: ${props => props.$minHeight}px;
 `
 
 const sortByOptions = [
@@ -44,12 +41,6 @@ class PopularRestaurants extends Component {
 
   componentDidMount() {
     this.getRestaurants()
-    this.setMinHeight()
-  }
-
-  setMinHeight = () => {
-    const minHeight = this.myRef.current.offsetHeight
-    this.setState({minHeight})
   }
 
   onChangeSearchInput = searchInput => {
@@ -188,7 +179,7 @@ class PopularRestaurants extends Component {
   renderLoader = () => {
     const {minHeight} = this.state
     return (
-      <LoaderContainer minHeight={minHeight}>
+      <LoaderContainer $minHeight={minHeight}>
         <Loader type="ThreeDots" color="#F7931E" height={50} width={50} />
       </LoaderContainer>
     )

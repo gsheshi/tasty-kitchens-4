@@ -2,6 +2,7 @@ dependencies:
   '@testing-library/jest-dom': 5.11.9
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.6.2
+  '@vercel/speed-insights': 1.2.0_react@17.0.1
   chalk: 4.1.0
   history: 5.0.0
   jest-localstorage-mock: 2.4.16
@@ -3030,6 +3031,33 @@ packages:
     dev: true
     resolution:
       integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
+  /@vercel/speed-insights/1.2.0_react@17.0.1:
+    dependencies:
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==
   /@webassemblyjs/ast/1.14.1:
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
@@ -12937,6 +12965,7 @@ specifiers:
   '@testing-library/jest-dom': 5.11.9
   '@testing-library/react': 11.2.5
   '@testing-library/user-event': 12.6.2
+  '@vercel/speed-insights': 1.2.0
   chalk: 4.1.0
   eslint: 7.11.0
   eslint-config-airbnb: 18.2.1

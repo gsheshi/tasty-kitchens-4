@@ -27,13 +27,17 @@ const RestaurantHeader = props => {
           Select Your favourite restaurant special dish and make your day
           happy...
         </p>
-        <input
-          type="search"
-          className="search-input"
-          placeholder="Search"
-          value={searchInput}
-          onChange={onChangeSearch}
-        />
+        <div className="search-container">
+          <label htmlFor="searchRestaurants">Search Restaurants</label>
+          <input
+            id="searchRestaurants"
+            type="search"
+            className="search-input"
+            placeholder="Search Restaurants"
+            value={searchInput}
+            onChange={onChangeSearch}
+          />
+        </div>
         <div className="sort-container">
           <BsFilterLeft size={20} />
           <p className="sort-text">Sort By</p>
