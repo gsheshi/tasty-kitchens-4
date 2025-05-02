@@ -2,7 +2,6 @@ dependencies:
   '@testing-library/jest-dom': 5.11.9
   '@testing-library/react': 11.2.5_react-dom@17.0.1+react@17.0.1
   '@testing-library/user-event': 12.6.2
-  '@vercel/speed-insights': 1.2.0_react@17.0.1
   chalk: 4.1.0
   history: 5.0.0
   jest-localstorage-mock: 2.4.16
@@ -20,6 +19,8 @@ dependencies:
   styled-components: 6.1.17_react-dom@17.0.1+react@17.0.1
 devDependencies:
   '@babel/eslint-parser': 7.27.1_eslint@7.11.0
+  '@babel/plugin-proposal-private-property-in-object': 7.21.11
+  babel-eslint: 10.1.0_eslint@7.11.0
   eslint: 7.11.0
   eslint-config-airbnb: 18.2.1_eslint@7.11.0
   eslint-config-prettier: 8.1.0_eslint@7.11.0
@@ -167,6 +168,22 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-2YaDd/Rd9E598B5+WIc8wJPmWETiiJXFYVE60oX8FDohv7rAUU3CQj+A1MgeEmcsk2+dQuEjIe/GDvig0SqL4g==
+  /@babel/helper-create-class-features-plugin/7.27.1:
+    dependencies:
+      '@babel/helper-annotate-as-pure': 7.27.1
+      '@babel/helper-member-expression-to-functions': 7.27.1
+      '@babel/helper-optimise-call-expression': 7.27.1
+      '@babel/helper-replace-supers': 7.27.1
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
+      '@babel/traverse': 7.27.1
+      semver: 6.3.1
+    dev: true
+    engines:
+      node: '>=6.9.0'
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    resolution:
+      integrity: sha512-QwGAmuvM17btKU5VqXfb+Giw4JcN0hjuufz3DYnpeVDvZLAObloM77bhMXiqry3Iio+Ai4phVRDwl6WU10+r5A==
   /@babel/helper-create-class-features-plugin/7.27.1_@babel+core@7.27.1:
     dependencies:
       '@babel/core': 7.27.1
@@ -268,6 +285,18 @@ packages:
       '@babel/core': ^7.0.0
     resolution:
       integrity: sha512-7fiA521aVw8lSPeI4ZOD3vRFkoqkJcS+z4hFo82bFSH/2tNd6eJ5qCVMS5OzDmZh/kaHQeBaeyxK6wljcPtveA==
+  /@babel/helper-replace-supers/7.27.1:
+    dependencies:
+      '@babel/helper-member-expression-to-functions': 7.27.1
+      '@babel/helper-optimise-call-expression': 7.27.1
+      '@babel/traverse': 7.27.1
+    dev: true
+    engines:
+      node: '>=6.9.0'
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    resolution:
+      integrity: sha512-7EHz6qDZc8RYS5ElPoShMheWvEgERonFCs7IAonWLLUTXW59DP14bCZt89/GKyreYn8g3S83m21FelHKbeDCKA==
   /@babel/helper-replace-supers/7.27.1_@babel+core@7.27.1:
     dependencies:
       '@babel/core': 7.27.1
@@ -489,6 +518,20 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==
+  /@babel/plugin-proposal-private-property-in-object/7.21.11:
+    dependencies:
+      '@babel/helper-annotate-as-pure': 7.27.1
+      '@babel/helper-create-class-features-plugin': 7.27.1
+      '@babel/helper-plugin-utils': 7.27.1
+      '@babel/plugin-syntax-private-property-in-object': 7.14.5
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+    dev: true
+    engines:
+      node: '>=6.9.0'
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==
   /@babel/plugin-proposal-private-property-in-object/7.21.11_@babel+core@7.27.1:
     dependencies:
       '@babel/core': 7.27.1
@@ -669,6 +712,16 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-KoK9ErH1MBlCPxV0VANkXW2/dw4vlbGDrFgz8bmUsBGYkFRcbRwMh6cIJubdPrkxRwuGdtCk0v/wPTKbQgBjkg==
+  /@babel/plugin-syntax-private-property-in-object/7.14.5:
+    dependencies:
+      '@babel/helper-plugin-utils': 7.27.1
+    dev: true
+    engines:
+      node: '>=6.9.0'
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-0wVnp9dxJ72ZUJDV27ZfbSj6iHLoytYZmh3rFcxNnvsJF3ktkzLDZPy/mA17HGsaQT3/DQsWYX1f1QGWkCoVUg==
   /@babel/plugin-syntax-private-property-in-object/7.14.5_@babel+core@7.27.1:
     dependencies:
       '@babel/core': 7.27.1
@@ -3031,33 +3084,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
-  /@vercel/speed-insights/1.2.0_react@17.0.1:
-    dependencies:
-      react: 17.0.1
-    dev: false
-    peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
-      next: '>= 13'
-      react: ^18 || ^19 || ^19.0.0-rc
-      svelte: '>= 4'
-      vue: ^3
-      vue-router: ^4
-    peerDependenciesMeta:
-      '@sveltejs/kit':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-      svelte:
-        optional: true
-      vue:
-        optional: true
-      vue-router:
-        optional: true
-    requiresBuild: true
-    resolution:
-      integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==
   /@webassemblyjs/ast/1.14.1:
     dependencies:
       '@webassemblyjs/helper-numbers': 1.13.2
@@ -3629,6 +3655,23 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==
+  /babel-eslint/10.1.0_eslint@7.11.0:
+    dependencies:
+      '@babel/code-frame': 7.27.1
+      '@babel/parser': 7.27.1
+      '@babel/traverse': 7.27.1
+      '@babel/types': 7.27.1
+      eslint: 7.11.0
+      eslint-visitor-keys: 1.3.0
+      resolve: 1.22.10
+    deprecated: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+    dev: true
+    engines:
+      node: '>=6'
+    peerDependencies:
+      eslint: '>= 4.12.1'
+    resolution:
+      integrity: sha512-ifWaTHQ0ce+448CYop8AdrQiBsGrnC+bMgfyKFdi6EsPLTAWG+QfyDeM6OH+FmWnKvEq5NnBMLvlBUPKQZoDSg==
   /babel-jest/27.5.1_@babel+core@7.27.1:
     dependencies:
       '@babel/core': 7.27.1
@@ -12962,10 +13005,11 @@ packages:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
   '@babel/eslint-parser': 7.27.1
+  '@babel/plugin-proposal-private-property-in-object': 7.21.11
   '@testing-library/jest-dom': 5.11.9
   '@testing-library/react': 11.2.5
   '@testing-library/user-event': 12.6.2
-  '@vercel/speed-insights': 1.2.0
+  babel-eslint: 10.1.0
   chalk: 4.1.0
   eslint: 7.11.0
   eslint-config-airbnb: 18.2.1

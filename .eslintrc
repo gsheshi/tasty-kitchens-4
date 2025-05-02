@@ -8,7 +8,6 @@
     "requireConfigFile": false
   },
   "extends": [
-    "react-app",
     "airbnb",
     "prettier"
   ],
